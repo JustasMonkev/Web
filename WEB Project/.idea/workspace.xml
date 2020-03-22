@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="da516a4a-6bae-43d5-8b9a-f78b1f6b74c0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/PAGES/Albums/Illmatic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PAGES/Albums/ItWasWritten.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebsiteTest/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebsiteTest/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebsiteTest/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebsiteTest/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebsiteTest/WebsiteTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../WebsiteTest/src/test/java/HelloTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../html/Baigemasis Darbas/.idea/Baigemasis Darbas.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../html/untitled/untitled.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javafors/1 StoringRecords/StoringRecords.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javafors/2 SportStatistics/SportStatistics.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javafors/Masyvai/Masyvai.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javafors/New folder (2)/FirstTest/FirstTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javafors/New folder (2)/Kolekcijos/.idea/Kolekcijos.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javafors/kartomijas/Masyvai/Masyvai.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main/selenium-java.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../testavimas/testavimas (2)/.idea/Baigemasis Darbas2.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1Yx6vKTCpckzAvgxSI2eLkxzvZ2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Užduotis Nr.01" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="da516a4a-6bae-43d5-8b9a-f78b1f6b74c0" name="Default Changelist" comment="" />
+      <created>1583872128947</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583872128947</updated>
+      <workItem from="1583872133423" duration="56000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1583872188347">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583872188347" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1583872137784">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583872137784" />
+  </component>
+</project>

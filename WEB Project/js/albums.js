@@ -4,7 +4,7 @@ $.ajax({
 
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer BQBGaSp1WTE9xnJZhUHQ7yCWwsHPOCQubUlyWIzf8-VmnRPzBfX3XAkZsgqTIAclEUZf0mMeH_EelBi4LD5LyXXhF4GqBnY3Fgj3dGzl_qVIMOFshYCH75pkM2Hcp_diPuiLUr6ewIdr0N4mVp6YNGsQFSGQUhCBw46bfTa-Kz4aimzWpaQRWYYrTdWghX3H6E1FGvk_PmZ_qNuJI4TDBotUN7IT6EJi3pGlbQKDy7gLY791TZeqo0rgwONdbfrlWrfce2OGLxNtSQ"
+        "Authorization": "Bearer BQCx-UpqBGga7zJDCEe7EVWHxNv6VyHBJqsBkzTqMWLoLoAxHD8EqJbO_yDynAgYdx9mHygQ-lLlx8TfSITICa0uEJoiIwG-W7MyW_AXtMrmKdP-FfgPvdbTxfBCQ8gx9aJc8kF-cVjnR-gbrP6xk6eFEYCvGFrMiZ06oQ6jaCUTUZ1mL4aUiYLji1Y4eG6hztd3Mmn4wMWMqKlLJN2kteNHnYaGnHWbO6V3RKdVv6pf43_hOS-JO66kghclGeWVUn89k-xFRmvriA"
 
     },
     success: function (response) {
@@ -26,19 +26,19 @@ function toHtmlSongs(response, a, b) {
     return response.albums[a].tracks.items[b].name;
 }
 function getAlbum(response, c) {
-    var songs;
+    var songs = '';
     for (var i = 0; i < response.albums[0].tracks.items.length; i++) {
-        songs += `<tr>
+        songs +=`<tr>
         <th scope="row">${i+1}</th> 
         <td>${toHtmlSongs(response, c, i)}</td><td>01:45</td>
         <tr>`;
     }
-    document.getElementById("tablebody").innerHTML = songs;
     document.getElementById("name").innerHTML = response.albums[c].name;
     document.getElementById("artist").innerHTML = response.albums[c].artists[0].name;
     document.getElementById("time").innerHTML = response.albums[c].release_date;
     document.getElementById("publisher").innerHTML = response.albums[c].label;
     document.getElementById("img").src = response.albums[c].images[0].url;
+    document.getElementById("tablebody").innerHTML = songs;
 }
 
 

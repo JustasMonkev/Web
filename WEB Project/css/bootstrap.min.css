@@ -1934,11 +1934,12 @@ pre code {
 
 .table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #dee2e6
+    border-bottom: 0px solid #dee2e6;
+    height: 28px;
 }
 
 .table tbody + tbody {
-    border-top: 2px solid #dee2e6
+    border-top: 1px solid #dee2e6
 }
 
 .table .table {
@@ -3481,7 +3482,7 @@ fieldset:disabled a.btn {
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
     line-height: 1.5;
-    border-radius: 0.3rem
+    border-radius: 0.9rem
 }
 
 .btn-group-sm > .btn,
@@ -3852,8 +3853,8 @@ input[type=submit].btn-block {
 
 .btn-group-lg > .btn + .dropdown-toggle-split,
 .btn-lg + .dropdown-toggle-split {
-    padding-right: 0.75rem;
-    padding-left: 0.75rem
+    padding-right: 0.95rem;
+    padding-left: 0.95rem
 }
 
 .btn-group-vertical {
@@ -8714,7 +8715,7 @@ button.bg-dark:hover {
 
 .mr-4,
 .mx-4 {
-    margin-right: 1.5rem !importantd-block
+    margin-right: 1.5rem !important-block
 }
 
 .mb-4,

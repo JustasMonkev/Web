@@ -31,7 +31,7 @@ function getAlbum(response, c) {
         songs +=`<tr>
         <th scope="row">${i+1}</th> 
         <td>${toHtmlSongs(response, c, i)}</td><td>01:45</td>
-        <tr>`;
+        </tr>`;
     }
     document.getElementById("name").innerHTML = response.albums[c].name;
     document.getElementById("artist").innerHTML = response.albums[c].artists[0].name;

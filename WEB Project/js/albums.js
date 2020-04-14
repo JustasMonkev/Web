@@ -4,7 +4,7 @@ $.ajax({
 
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer BQCx-UpqBGga7zJDCEe7EVWHxNv6VyHBJqsBkzTqMWLoLoAxHD8EqJbO_yDynAgYdx9mHygQ-lLlx8TfSITICa0uEJoiIwG-W7MyW_AXtMrmKdP-FfgPvdbTxfBCQ8gx9aJc8kF-cVjnR-gbrP6xk6eFEYCvGFrMiZ06oQ6jaCUTUZ1mL4aUiYLji1Y4eG6hztd3Mmn4wMWMqKlLJN2kteNHnYaGnHWbO6V3RKdVv6pf43_hOS-JO66kghclGeWVUn89k-xFRmvriA"
+        "Authorization": "Bearer BQCy0ofg_IbRVj-JrXjfPpS-gnmDdDxDPFh-2BloYKqDwiVmyw1edA63GNkGSjt_bESNK968RSzHBkn-5ahwhb7yLUcoEcv5D6dOJSaa_5VykLkNwdy8QlMdTEc92vUmtPQjgvc8-Xt2PjZ0n5G93b50rlNB0IwU-vJAw0tXGQ4MwYHr6hRZbfSVvtAbNacBB8r4r-Or_k9FrqJ3bSUTaNvg_j8gKL6Ik5SmHtOLb22hVjREAE8GFFSa4XtihgSMJrHs9lf6yIO1sg"
 
     },
     success: function (response) {
@@ -26,7 +26,7 @@ function toHtmlSongs(response, a, b) {
     return response.albums[a].tracks.items[b].name;
 }
 function getAlbum(response, c) {
-    var songs = '';
+    let songs = "";
     for (var i = 0; i < response.albums[0].tracks.items.length; i++) {
         songs +=`<tr>
         <th scope="row">${i+1}</th> 

@@ -27,7 +27,7 @@ function toHtmlSongs(response, a, b) {
 }
 function getAlbum(response, c) {
     let songs = "";
-    for (var i = 0; i < response.albums[0].tracks.items.length; i++) {
+    for (let i = 0; i < response.albums[c].tracks.items.length; i++) {
         songs +=`<tr>
         <th scope="row">${i+1}</th> 
         <td>${toHtmlSongs(response, c, i)}</td><td>01:45</td>

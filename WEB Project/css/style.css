@@ -994,7 +994,30 @@ footer {
     font-size: 1.2em;
     margin-right: 25px;
 }
-
+.moveill {
+    margin-left: -22px;
+}
+.moveIam {
+    margin-right: 2px;
+}
+.moveNastradamus {
+    margin-right: -138px;
+}
+.moveTheLost {
+    margin-right: -144px;
+}
+.moveStreetDisciple {
+    margin-left: -46px;
+}
+.moveHHisD { 
+    margin-left: -25px;
+}
+.moveNas {
+    margin-left: -34px;
+}
+.moveNASIR {
+    margin-left: -13px;
+}
 .cart-row:last-child {
     border-bottom: 1px solid black;
 }
@@ -1050,7 +1073,16 @@ footer {
     margin-left: -48px;
     font-family: 'Josefin Sans', sans-serif;
 }
-
+.moreInfoButton {
+    color: #dcdcdc;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+.moreInfoButton:hover {
+    color: #232323;
+     text-decoration: none;
+}
 /* SHOP */
 /* CHECKOUT */
 @import url('https://fonts.googleapis.com/css?family=Oswald|Poppins:300,400,700,900');

@@ -256,6 +256,23 @@ a:hover {
     border-width: 37px 0px 37px 74px;
     border-color: transparent transparent transparent rgb(137, 137, 137);
 }
+.musicbuttoncontorl1 {
+    width: 34px;
+    height: 34px;
+    border-style: solid;
+    border-width: 37px;
+    border-color: #202020;
+    border-width: 37px 37px 37px 37px;
+    border-color: red blue green yellow;
+    cursor: pointer;
+    border-width: 37px 0px 37px 34px;
+    border-color: red blue green yellow;
+    box-sizing: border-box;
+    width: 34px;
+    height: 34px;
+    border-width: 37px 0px 37px 34px;;
+    border-color: transparent transparent transparent rgb(137, 137, 137);
+}
 
 .pausebutton {
     width: 74px;
@@ -939,7 +956,17 @@ footer {
     padding-bottom: 10px;
     margin-top: 10px;
 }
-
+@media (max-width: 411px) {
+    .cart-column {
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+        border-bottom: 1px solid black;
+        margin-right: 1.5em;
+        padding-bottom: 10px;
+        margin-top: 10px;
+    }
+}
 .cart-row {
     display: flex;
 }

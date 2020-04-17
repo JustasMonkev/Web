@@ -4,7 +4,7 @@ $.ajax({
 
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer BQCy0ofg_IbRVj-JrXjfPpS-gnmDdDxDPFh-2BloYKqDwiVmyw1edA63GNkGSjt_bESNK968RSzHBkn-5ahwhb7yLUcoEcv5D6dOJSaa_5VykLkNwdy8QlMdTEc92vUmtPQjgvc8-Xt2PjZ0n5G93b50rlNB0IwU-vJAw0tXGQ4MwYHr6hRZbfSVvtAbNacBB8r4r-Or_k9FrqJ3bSUTaNvg_j8gKL6Ik5SmHtOLb22hVjREAE8GFFSa4XtihgSMJrHs9lf6yIO1sg"
+        "Authorization": "Bearer BQC61j-Ni77e4cnFBYaq0boYkwSweYFf7visQgC25_LGT_Pp56hJTujLtmUJc3Fem4lNSLzwHN41v7QMZwmwd87KUVNFOBqnbPeQE3kB6qc3WIXPZRdP9OvtV0Igw8J3rJ6XrAV_OJShr3oZvEfopIosJRjJRaacx-69vKAc8pioiqpBjPlbblXB1ZcHSFcvaXdjGb0Zacj3gm6xFZl8s1iPQ_i-jgksgDuWF4bGC79E2s2SxX5wlN9O-k4XeN_TKy5eXJjIjjfAmw"
 
     },
     success: function (response) {
@@ -12,25 +12,34 @@ $.ajax({
         toHtml(response);
     }
 });
-
-
 function toHtml(response) {
     var url = window.location.pathname;
     var pagefile = url.substring(url.lastIndexOf('/') + 1);
     if (pagefile.includes("Illmatic")) {
         getAlbum(response, 0);
     }
-    
+
 }
+
 function toHtmlSongs(response, a, b) {
     return response.albums[a].tracks.items[b].name;
 }
+
+function millisToMinutesAndSeconds(response, a, b) {
+    let minutes = Math.floor(response.albums[a].tracks.items[b].duration_ms / 60000);
+    let seconds = ((response.albums[a].tracks.items[b].duration_ms % 60000) / 1000).toFixed(0);
+    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+}
+function playsongs(response, a, b) {
+    return response.albums[a].tracks.items[b].preview_url;
+}
+let music = document.getElementById("music");
 function getAlbum(response, c) {
     let songs = "";
     for (let i = 0; i < response.albums[c].tracks.items.length; i++) {
-        songs +=`<tr>
-        <th scope="row">${i+1}</th> 
-        <td>${toHtmlSongs(response, c, i)}</td><td>01:45</td>
+        songs += `<tr>
+        <th scope="row">${i + 1}</th>
+        <td>${toHtmlSongs(response, c, i)}</td><td>${millisToMinutesAndSeconds(response, c, i)}</td>
         </tr>`;
     }
     document.getElementById("name").innerHTML = response.albums[c].name;
@@ -40,5 +49,3 @@ function getAlbum(response, c) {
     document.getElementById("img").src = response.albums[c].images[0].url;
     document.getElementById("tablebody").innerHTML = songs;
 }
-
-

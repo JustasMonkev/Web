@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da516a4a-6bae-43d5-8b9a-f78b1f6b74c0" name="Default Changelist" comment="website about my favourite artist">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/albums.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/albums.js" afterDir="false" />
-    </list>
+    <list default="true" id="da516a4a-6bae-43d5-8b9a-f78b1f6b74c0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +43,7 @@
       <workItem from="1586849338131" duration="69000" />
       <workItem from="1586851093690" duration="147000" />
       <workItem from="1586851876577" duration="4000" />
+      <workItem from="1587446906805" duration="157000" />
     </task>
     <task id="LOCAL-00001" summary="website about my favourite artist">
       <created>1586552570128</created>
@@ -82,7 +80,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586851232774</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="website about my favourite artist">
+      <created>1587446956254</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1587446956254</updated>
+    </task>
+    <task id="LOCAL-00007" summary="website about my favourite artist">
+      <created>1587447047857</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1587447047857</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,10 +106,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="website about my favourite artist" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="570" y="114" key="CommitChangelistDialog2" timestamp="1587446954645">
+    <state x="570" y="114" key="CommitChangelistDialog2" timestamp="1587447046450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="570" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587446954645" />
+    <state x="570" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587447046450" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1583872188347">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

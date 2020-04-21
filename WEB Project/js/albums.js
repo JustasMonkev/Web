@@ -4,7 +4,7 @@ $.ajax({
 
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer BQC61j-Ni77e4cnFBYaq0boYkwSweYFf7visQgC25_LGT_Pp56hJTujLtmUJc3Fem4lNSLzwHN41v7QMZwmwd87KUVNFOBqnbPeQE3kB6qc3WIXPZRdP9OvtV0Igw8J3rJ6XrAV_OJShr3oZvEfopIosJRjJRaacx-69vKAc8pioiqpBjPlbblXB1ZcHSFcvaXdjGb0Zacj3gm6xFZl8s1iPQ_i-jgksgDuWF4bGC79E2s2SxX5wlN9O-k4XeN_TKy5eXJjIjjfAmw"
+        "Authorization": "Bearer  BQBhPaQ2eSMP3qJ8fNM408LzqMN9KKOrM3E9b77T0DLdMEkMGH7FAs2-SDwg6h5Ek-LhXL93CvhisAarUJrYAuMk2-jq9UjP8vzOH7Z6j6nA6QbQ7lm7aB5pa8lGq-IHBgw_4likiHBfw1l1J_Gt0oGgPY5ctqUWl3weJHjff0dVTYUOKUAe5bGRaMWdTulRwNncrZGCChZTxhhUqnv5Z3qPrBk0HFHRE01JUCtvTVP_OA_FZXp4Qy1EHW0WjAsHb9MA3DxmBy4-cg"
 
     },
     success: function (response) {
@@ -13,14 +13,24 @@ $.ajax({
     }
 });
 function toHtml(response) {
-    var url = window.location.pathname;
-    var pagefile = url.substring(url.lastIndexOf('/') + 1);
-    if (pagefile.includes("Illmatic")) {
+    let shopButtons;
+     console.log(localStorage.getItem('buttons2'));
+    console.log(localStorage.getItem('buttons1'));
+    console.log(localStorage.getItem('buttons2'));
+    const something = JSON.parse(localStorage.getItem('array'));
+    console.log(something);
+    if (localStorage.getItem('buttons2') == null) {
         getAlbum(response, 0);
+        shopButtons = `<a class="btn btn-primary amazon btn-lg "
+                href="https://www.amazon.com/Illmatic-Explicit-Nas/dp/B00DFQDNOQ/ref=sr_1_1?keywords=nas+illmatic&qid=1583783046&sr=8-1"
+                target="_blank" role="button">Purchase - Amazon</a>
+                <div class="moveitenus">
+                <a class="btn btn-primary itunes btn-lg "
+                    href="https://music.apple.com/us/album/illmatic/662324135?ign-mpt=uo%3D4" target="_blank"
+                    role="button">Purchase - iTunes</a>`
+        document.getElementById("shopButtons").innerHTML = shopButtons;
     }
-
 }
-
 function toHtmlSongs(response, a, b) {
     return response.albums[a].tracks.items[b].name;
 }
@@ -33,7 +43,6 @@ function millisToMinutesAndSeconds(response, a, b) {
 function playsongs(response, a, b) {
     return response.albums[a].tracks.items[b].preview_url;
 }
-let music = document.getElementById("music");
 function getAlbum(response, c) {
     let songs = "";
     for (let i = 0; i < response.albums[c].tracks.items.length; i++) {

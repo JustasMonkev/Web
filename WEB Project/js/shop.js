@@ -1,3 +1,4 @@
+
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
@@ -91,7 +92,7 @@ function addItemToCart(title, price, imageSrc) {
     cartItems.append(cartRow)
     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
-    
+
 }
 
 // Updates the total price in the cart //
@@ -109,4 +110,14 @@ function updateCartTotal() {
     }
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+}
+var buttons = document.getElementsByClassName("moreInfoButtons");
+function getNumbers() {
+    var len = buttons.length;
+        buttons[i].addEventListener("click", (event) => {
+            localStorage.setItem('buttons1', buttons[0].value);
+            localStorage.setItem('buttons2', buttons.length);
+            localStorage.setItem('array', JSON.stringify(buttons));
+            window.document.location = 'Albums/Illmatic.html';
+        });
 }

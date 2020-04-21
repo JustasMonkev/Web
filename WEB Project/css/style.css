@@ -956,7 +956,7 @@ footer {
     padding-bottom: 10px;
     margin-top: 10px;
 }
-@media (max-width: 411px) {
+@media (max-width: 437px) {
     .cart-column {
         display: flex;
         align-items: center;
@@ -1100,13 +1100,13 @@ footer {
     margin-left: -48px;
     font-family: 'Josefin Sans', sans-serif;
 }
-.moreInfoButton {
+.moreInfoButtons {
     color: #dcdcdc;
     text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
-.moreInfoButton:hover {
+.moreInfoButtons:hover {
     color: #232323;
      text-decoration: none;
 }

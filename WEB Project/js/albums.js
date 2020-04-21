@@ -14,7 +14,6 @@ $.ajax({
     }
 });
 
-localStorage.setItem('func',toHtml());
     function toHtml(response) {
     let shopButtons;
     const something = JSON.parse(localStorage.getItem('array'));

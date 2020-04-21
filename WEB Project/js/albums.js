@@ -1,3 +1,4 @@
+
 $.ajax({
     url: 'https://api.spotify.com/v1/albums?ids=3kEtdS2pH6hKcMU9Wioob1%2C78Fgb88MY0ECc4GVMejqTg%2C4UhEjfIRx4tE1XRY21vwNa%2C0yv3K62ndWgrZ0bbAEMzj5%2C0cLzuJG2UDa0axMQkF7JR6%2C2mU2jRMwrsL1tG97xKoiav%2C3rV1aPkrWyMs6YTvTpSbIY%2C0jghcWTsQzux5T9sAfZO13%2C7sHrPadM39466NY7DW3s4r%2C41LyFl0XPrCqYeNml7obol%2C66EwBbt2kPgugo8Wz0SKAw%2C4tRNl7PwUzXrxTP3YZjWgS&market=Es',
     headers: {
@@ -9,17 +10,15 @@ $.ajax({
     },
     success: function (response) {
         console.log(response);
-        toHtml(response);
+         toHtml(response);
     }
 });
-function toHtml(response) {
+
+localStorage.setItem('func',toHtml());
+    function toHtml(response) {
     let shopButtons;
-     console.log(localStorage.getItem('buttons2'));
-    console.log(localStorage.getItem('buttons1'));
-    console.log(localStorage.getItem('buttons2'));
     const something = JSON.parse(localStorage.getItem('array'));
     console.log(something);
-    if (localStorage.getItem('buttons2') == null) {
         getAlbum(response, 0);
         shopButtons = `<a class="btn btn-primary amazon btn-lg "
                 href="https://www.amazon.com/Illmatic-Explicit-Nas/dp/B00DFQDNOQ/ref=sr_1_1?keywords=nas+illmatic&qid=1583783046&sr=8-1"
@@ -28,8 +27,7 @@ function toHtml(response) {
                 <a class="btn btn-primary itunes btn-lg "
                     href="https://music.apple.com/us/album/illmatic/662324135?ign-mpt=uo%3D4" target="_blank"
                     role="button">Purchase - iTunes</a>`
-        document.getElementById("shopButtons").innerHTML = shopButtons;
-    }
+    document.getElementById("shopButtons").innerHTML = shopButtons;
 }
 function toHtmlSongs(response, a, b) {
     return response.albums[a].tracks.items[b].name;

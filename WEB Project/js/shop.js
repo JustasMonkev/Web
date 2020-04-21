@@ -113,11 +113,14 @@ function updateCartTotal() {
 }
 var buttons = document.getElementsByClassName("moreInfoButtons");
 function getNumbers() {
-    var len = buttons.length;
+    for(var i =0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", (event) => {
-            localStorage.setItem('buttons1', buttons[0].value);
-            localStorage.setItem('buttons2', buttons.length);
-            localStorage.setItem('array', JSON.stringify(buttons));
-            window.document.location = 'Albums/Illmatic.html';
+            console.log("ff");
+            location.href = '/Albums/Illmatic.html';
         });
+    }
 }
+let arry = jQuery.makeArray(buttons);
+var arr = Array.prototype.slice.call(buttons);
+console.log(arr);
+localStorage.setItem('array', JSON.stringify(arry));

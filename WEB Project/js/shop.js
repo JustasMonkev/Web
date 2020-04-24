@@ -115,12 +115,10 @@ var buttons = document.getElementsByClassName("moreInfoButtons");
 function getNumbers() {
     for(var i =0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", (event) => {
-            console.log("ff");
-            location.href = '/Albums/Illmatic.html';
         });
     }
 }
-let arry = jQuery.makeArray(buttons);
-var arr = Array.prototype.slice.call(buttons);
-console.log(arr);
-localStorage.setItem('array', JSON.stringify(arry));
+function toLocalStorage(number) {
+    localStorage.setItem("number",number);
+    location.href =  'Albums/Illmatic.html';
+    }

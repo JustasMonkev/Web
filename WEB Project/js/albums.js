@@ -16,9 +16,7 @@ $.ajax({
 
     function toHtml(response) {
     let shopButtons;
-    const something = JSON.parse(localStorage.getItem('array'));
-    console.log(something);
-        getAlbum(response, 0);
+        getAlbum(response, localStorage.getItem("number"));
         shopButtons = `<a class="btn btn-primary amazon btn-lg "
                 href="https://www.amazon.com/Illmatic-Explicit-Nas/dp/B00DFQDNOQ/ref=sr_1_1?keywords=nas+illmatic&qid=1583783046&sr=8-1"
                 target="_blank" role="button">Purchase - Amazon</a>

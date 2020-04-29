@@ -5,19 +5,19 @@ $.ajax({
 
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer  BQAynI4zBIQM9bb95N3k9U-T5gg1WwVVUEt5p5ZAI4Au_XzV4HHKLzFyZ9Q4JmdeWKwbBFKjiL1y4pN5JXN3c9LWjbM_k9P5pa-6fLLZJRgSGA99ClkE3rbmvCq49Op71_if6MCbggwJgufFAafwr8kDQZQciJVXu2qzA_Is2F1zrJulcEz7ribvNh455rwxsVTQg732S-73Qi6KSQ_ovg4zWfk2nb6M8G6jA63tULGMZaOL6JcTtcNhOi_HtjMGw-aW3kVR2p9p9g"
+        "Authorization": "Bearer  BQDT7mWO5jWQEF47Ox0AG6poFxqvewEFPx_pHboSs7uXI0_bNxsAV2N9FnE0gOtD0fsFTJ8jXMQuOcUS41uWjCrXXdMxb-xZKZCzIen03G_mmfVLF7R64Lv_zDpPYGhsIc3vCsiVSrXKgk4C9Lb5E3SuS4lg0KxkBU8QNuKePMGgmcy0WuDmTekSj5juP_0BGyEGDT0duc7Lk2kmM67LzP6QyM8V2mjl8OzT9uCK18wTOUo4zT-Hpmet02Ljk9TllEQsJ3AUPHfvfYhh"
 
     },
     success: function (response) {
         console.log(response);
-         toHtml(response);
+        toHtml(response);
     }
 });
 
-    function toHtml(response) {
-    let shopButtons;
-        getAlbum(response, localStorage.getItem("number"));
-        shopButtons = `<a class="btn btn-primary amazon btn-lg "
+function toHtml(response) {
+    let shopButtons = "";
+    getAlbum(response, localStorage.getItem("number"))
+    shopButtons = `<a class="btn btn-primary amazon btn-lg "
                 href="https://www.amazon.com/Illmatic-Explicit-Nas/dp/B00DFQDNOQ/ref=sr_1_1?keywords=nas+illmatic&qid=1583783046&sr=8-1"
                 target="_blank" role="button">Purchase - Amazon</a>
                 <div class="moveitenus">
@@ -25,7 +25,9 @@ $.ajax({
                     href="https://music.apple.com/us/album/illmatic/662324135?ign-mpt=uo%3D4" target="_blank"
                     role="button">Purchase - iTunes</a>`
     document.getElementById("shopButtons").innerHTML = shopButtons;
+
 }
+
 function toHtmlSongs(response, a, b) {
     return response.albums[a].tracks.items[b].name;
 }
@@ -43,7 +45,9 @@ function getAlbum(response, c) {
     for (let i = 0; i < response.albums[c].tracks.items.length; i++) {
         songs += `<tr>
         <th scope="row">${i + 1}</th>
-        <td>${toHtmlSongs(response, c, i)}</td><td>${millisToMinutesAndSeconds(response, c, i)}</td>
+        <td>${toHtmlSongs(response, c, i)}</td><td>${millisToMinutesAndSeconds(response, c, i)}</td><td><button class ="buttons"><i class="fas fa-play"></i></button><audio class = "music" id="t${i}">
+        <source src='${playsongs(response, c, i)}'type='audio/mpeg'/>
+    </audio></td>
         </tr>`;
     }
     document.getElementById("name").innerHTML = response.albums[c].name;
@@ -52,4 +56,19 @@ function getAlbum(response, c) {
     document.getElementById("publisher").innerHTML = response.albums[c].label;
     document.getElementById("img").src = response.albums[c].images[0].url;
     document.getElementById("tablebody").innerHTML = songs;
+    var button = document.getElementsByClassName("buttons");
+    for (var i = 0; i < button.length; i++) {
+        button[i].addEventListener("click", function(e) {
+            var audiot = e.target.parentElement.nextElementSibling;
+            var buttonClasses = document.getElementsByClassName("fas fa-play");
+            console.log(buttonClasses);
+            if (audiot.paused) {
+                audiot.play();
+                buttonClasses[0].classList.remove(e.srcElement.className);
+                buttonClasses[0].classList.add("fas fa-pause");
+             } else {
+                audiot.pause();
+            }
+        });
+    }
 }

@@ -5,7 +5,7 @@ $.ajax({
 
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer  BQDT7mWO5jWQEF47Ox0AG6poFxqvewEFPx_pHboSs7uXI0_bNxsAV2N9FnE0gOtD0fsFTJ8jXMQuOcUS41uWjCrXXdMxb-xZKZCzIen03G_mmfVLF7R64Lv_zDpPYGhsIc3vCsiVSrXKgk4C9Lb5E3SuS4lg0KxkBU8QNuKePMGgmcy0WuDmTekSj5juP_0BGyEGDT0duc7Lk2kmM67LzP6QyM8V2mjl8OzT9uCK18wTOUo4zT-Hpmet02Ljk9TllEQsJ3AUPHfvfYhh"
+        "Authorization": "Bearer  BQBauAMeCTEeqmFzM9EQkzSodshsFRjJigWY3smwseS19-f-vjQYdu1exGuvxGxl7mc7AW0iqPEw6adKWkrRxGYy8VhPp-vs48qVz1UysH0Y0jCtgAIksZpi0AYlszcCzv7rbPs1u_61hop_klW7IYm0G0efVGdiai39JUh6tG8yD9WsMUdsSPINo9X55UzibP6L89b5PdMcueTZVjuwD5dKwcWOgi48I7Wb5YHKt3W0rRRijWTvnhvySDe9_SNR2XWluD6LqJi72J7g"
 
     },
     success: function (response) {
@@ -17,6 +17,7 @@ $.ajax({
 function toHtml(response) {
     let shopButtons = "";
     getAlbum(response, localStorage.getItem("number"))
+    if( localStorage.getItem("number") == 0) {
     shopButtons = `<a class="btn btn-primary amazon btn-lg "
                 href="https://www.amazon.com/Illmatic-Explicit-Nas/dp/B00DFQDNOQ/ref=sr_1_1?keywords=nas+illmatic&qid=1583783046&sr=8-1"
                 target="_blank" role="button">Purchase - Amazon</a>
@@ -24,10 +25,21 @@ function toHtml(response) {
                 <a class="btn btn-primary itunes btn-lg "
                     href="https://music.apple.com/us/album/illmatic/662324135?ign-mpt=uo%3D4" target="_blank"
                     role="button">Purchase - iTunes</a>`
+    }
+    if( localStorage.getItem("number") == 1) {
+        shopButtons = `<a class="btn btn-primary amazon btn-lg "
+                    href="https://www.amazon.com/Illmatic-Explicit-Nas/dp/B00DFQDNOQ/ref=sr_1_1?keywords=nas+illmatic&qid=1583783046&sr=8-1"
+                    target="_blank" role="button">Purchase - Amazon</a>
+                    <div class="moveitenus">
+                    <a class="btn btn-primary itunes btn-lg "
+                        href="https://music.apple.com/us/album/illmatic/662324135?ign-mpt=uo%3D4" target="_blank"
+                        role="button">Purchase - iTunes</a>`
+                        img.classList.add("classfor14Images");
+        }
     document.getElementById("shopButtons").innerHTML = shopButtons;
 
-}
 
+}
 function toHtmlSongs(response, a, b) {
     return response.albums[a].tracks.items[b].name;
 }
@@ -54,19 +66,19 @@ function getAlbum(response, c) {
     document.getElementById("artist").innerHTML = response.albums[c].artists[0].name;
     document.getElementById("time").innerHTML = response.albums[c].release_date;
     document.getElementById("publisher").innerHTML = response.albums[c].label;
-    document.getElementById("img").src = response.albums[c].images[0].url;
+    var img = document.getElementById("img").src = response.albums[c].images[0].url;
     document.getElementById("tablebody").innerHTML = songs;
     var button = document.getElementsByClassName("buttons");
     for (var i = 0; i < button.length; i++) {
         button[i].addEventListener("click", function(e) {
             var audiot = e.target.parentElement.nextElementSibling;
-            var buttonClasses = document.getElementsByClassName("fas fa-play");
-            console.log(buttonClasses);
             if (audiot.paused) {
+                e.target.classList.remove("fa-play");
+                e.target.classList.add("fa-pause");
                 audiot.play();
-                buttonClasses[0].classList.remove(e.srcElement.className);
-                buttonClasses[0].classList.add("fas fa-pause");
              } else {
+                e.target.classList.add("fa-play");
+                e.target.classList.remove("fa-pause");
                 audiot.pause();
             }
         });

@@ -587,6 +587,7 @@ button {
     outline: none !important;
     border: none;
     background: transparent;
+    color: #d3cbda;
 }
 
 button:hover {
@@ -1252,6 +1253,11 @@ hr {
     margin-left: 60%;
     width: 37%;
 }
+.classfor14Images {
+    margin-top: -62%;
+    margin-left: 55%;
+    width: 46%;
+}
 @media (max-width: 988px) {
     .moveimg {
         margin-top: -1%;
@@ -1323,3 +1329,49 @@ hr {
     padding-top: 2%;
 
 }
+/* Search box*/
+#myInput {
+    margin-left: 32%;
+    margin-top: 5%;
+    border-radius: 30px;
+    left: 100px;
+    width: 377px;
+    height: 60px;
+    background-color: rgb(55, 55, 55);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+}
+@media (max-width: 595px) {
+    #myInput  {
+        margin-left: 16%;
+        margin-top: 5%;
+        border-radius: 30px;
+        left: 100px;
+        width: 377px;
+        height: 60px;
+        background-color: rgb(55, 55, 55);
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+    }
+}
+@media (max-width: 411px) {
+#myInput {
+    margin-left: -2%;
+    margin-top: 5%;
+    border-radius: 30px;
+    left: 100px;
+    width: 362px;
+    height: 60px;
+    background-color: rgb(55, 55, 55);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+}
+}
+
+/* Search box*/

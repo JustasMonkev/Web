@@ -113,17 +113,32 @@ function updateCartTotal() {
 }
 
 function toLocalStorage(number) {
-    localStorage.setItem("number",number);
-    location.href =  'Albums/Illmatic.html';
-    }
-    // Search by word 
-	$(document).ready(function(){
-        $("#myInput").on("keyup", function() {
-          var value = $(this).val().toLowerCase();
-          
-          $("#myList div").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-          });
-        });
-      });
+    localStorage.setItem("number", number);
+    location.href = 'Albums/Illmatic.html';
+}
 // Search by word 
+$(document).ready(function () {
+    $("#myInput").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+
+        $("#myList div").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
+// Search by word 
+//sort By price
+
+    var priceList = [];
+    var price = document.getElementsByClassName("shop-item-price");
+    var text;
+    for (var i = 0; i < 12; i++) {
+        priceList.push(price[i].innerText);
+        price.sort;
+      console.log(priceList.sort((a, b) => (a - b)));
+        
+    }
+
+console.log(priceList);
+
+    //sort By price

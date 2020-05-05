@@ -5,7 +5,7 @@ $.ajax({
 
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer  BQBauAMeCTEeqmFzM9EQkzSodshsFRjJigWY3smwseS19-f-vjQYdu1exGuvxGxl7mc7AW0iqPEw6adKWkrRxGYy8VhPp-vs48qVz1UysH0Y0jCtgAIksZpi0AYlszcCzv7rbPs1u_61hop_klW7IYm0G0efVGdiai39JUh6tG8yD9WsMUdsSPINo9X55UzibP6L89b5PdMcueTZVjuwD5dKwcWOgi48I7Wb5YHKt3W0rRRijWTvnhvySDe9_SNR2XWluD6LqJi72J7g"
+        "Authorization": "Bearer  BQCbduUTmRkWnv3yjdmVsv5mHhr5Gafn3Pj2Q9GX0v_rklUqUgFNhM4-zyo-GUdOKENjfnGM-d7f1q3-drbv2qGuzEEm1tfWfDpSlnlcC6zSBt1fhxrcCtjt0ffHVUwwBw3mQDRhivrtyWI7Dpe4XQU0yafxD_0oWyOY7VgFRkWFD0vbV0_aseeBgDfCkdrIRseOwNfI6_GS3d0aWtLGFZOcDNYBET1JWSAT4P-ptPqEiUi_Qjw-ywPlgo6Bmf6sbGW895AwUoQ4rq-5"
 
     },
     success: function (response) {
@@ -15,28 +15,7 @@ $.ajax({
 });
 
 function toHtml(response) {
-    let shopButtons = "";
     getAlbum(response, localStorage.getItem("number"))
-    if( localStorage.getItem("number") == 0) {
-    shopButtons = `<a class="btn btn-primary amazon btn-lg "
-                href="https://www.amazon.com/Illmatic-Explicit-Nas/dp/B00DFQDNOQ/ref=sr_1_1?keywords=nas+illmatic&qid=1583783046&sr=8-1"
-                target="_blank" role="button">Purchase - Amazon</a>
-                <div class="moveitenus">
-                <a class="btn btn-primary itunes btn-lg "
-                    href="https://music.apple.com/us/album/illmatic/662324135?ign-mpt=uo%3D4" target="_blank"
-                    role="button">Purchase - iTunes</a>`
-    }
-    if( localStorage.getItem("number") == 1) {
-        shopButtons = `<a class="btn btn-primary amazon btn-lg "
-                    href="https://www.amazon.com/Illmatic-Explicit-Nas/dp/B00DFQDNOQ/ref=sr_1_1?keywords=nas+illmatic&qid=1583783046&sr=8-1"
-                    target="_blank" role="button">Purchase - Amazon</a>
-                    <div class="moveitenus">
-                    <a class="btn btn-primary itunes btn-lg "
-                        href="https://music.apple.com/us/album/illmatic/662324135?ign-mpt=uo%3D4" target="_blank"
-                        role="button">Purchase - iTunes</a>`
-                        img.classList.add("classfor14Images");
-        }
-    document.getElementById("shopButtons").innerHTML = shopButtons;
 
 
 }
@@ -54,6 +33,7 @@ function playsongs(response, a, b) {
 }
 function getAlbum(response, c) {
     let songs = "";
+    let shopButtons = "";
     for (let i = 0; i < response.albums[c].tracks.items.length; i++) {
         songs += `<tr>
         <th scope="row">${i + 1}</th>
@@ -61,12 +41,43 @@ function getAlbum(response, c) {
         <source src='${playsongs(response, c, i)}'type='audio/mpeg'/>
     </audio></td>
         </tr>`;
+        if( response.albums[c].tracks.items.length == 7) {
+            img.classList.add("classfor7Images");
+        }
+        if( response.albums[c].tracks.items.length == 11) {
+            img.classList.add("classfor11Images");
+        }
+        if( response.albums[c].tracks.items.length == 10) { 
+            shopButtons = `<a class="btn btn-primary amazon btn-lg "
+            href="https://www.amazon.com/Illmatic-Explicit-Nas/dp/B00DFQDNOQ/ref=sr_1_1?keywords=nas+illmatic&qid=1583783046&sr=8-1"
+            target="_blank" role="button">Purchase - Amazon</a>
+            <div class="moveitenus">
+            <a class="btn btn-primary itunes btn-lg "
+                href="https://music.apple.com/us/album/illmatic/662324135?ign-mpt=uo%3D4" target="_blank"
+                role="button">Purchase - iTunes</a>`
+        }
+        if( response.albums[c].tracks.items.length == 14) {
+            img.classList.add("classfor14Images");
+        }
+        if( response.albums[c].tracks.items.length == 15) {
+            img.classList.add("classfor15Images");
+        }
+        if( response.albums[c].tracks.items.length == 16) {
+            img.classList.add("classfor16Images");
+        }
+        if( response.albums[c].tracks.items.length == 17) {
+            img.classList.add("classfor17Images");
+        }
+        if( response.albums[c].tracks.items.length == 25) {
+            img.classList.add("classfor25Images");
+        }
+        document.getElementById("shopButtons").innerHTML = shopButtons;
     }
     document.getElementById("name").innerHTML = response.albums[c].name;
     document.getElementById("artist").innerHTML = response.albums[c].artists[0].name;
     document.getElementById("time").innerHTML = response.albums[c].release_date;
     document.getElementById("publisher").innerHTML = response.albums[c].label;
-    var img = document.getElementById("img").src = response.albums[c].images[0].url;
+     img = document.getElementById("img").src = response.albums[c].images[0].url;
     document.getElementById("tablebody").innerHTML = songs;
     var button = document.getElementsByClassName("buttons");
     for (var i = 0; i < button.length; i++) {

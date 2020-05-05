@@ -60,7 +60,19 @@
     <!-- Body -->
     <div class="backgroundcolor">
         <section class="container content-section">
-        <!-- Vaivos ajax nuoroda --> <input id="myInput" type="text" placeholder="Search..">
+        <!-- Vaivos ajax nuoroda --> 
+        <section class="container content-section">
+            <!-- Vaivos ajax nuoroda -->
+           <div>
+                <nav class="navbar">
+                    <input id="myInput" class="form-control" type="text" placeholder="Search..">
+                    <select id="myInput-sort" class="rounded">
+                        <option value="empty"> Sort by... </option>
+                        <option value="Price"> Price </option>
+                        <option value="Data"> Album date </option>
+                    </select>
+                </nav>
+            </div>
             <div class="shop-items" id="myList">
                 <!-- Shop items grid 1 -->
                 <div class="shop-item">

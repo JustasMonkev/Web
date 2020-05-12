@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="da516a4a-6bae-43d5-8b9a-f78b1f6b74c0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PAGES/SHOP.html" beforeDir="false" afterPath="$PROJECT_DIR$/PAGES/SHOP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/albums.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/albums.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/shop.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +57,9 @@
       <workItem from="1588187736129" duration="999000" />
       <workItem from="1588449408405" duration="449000" />
       <workItem from="1588584483807" duration="17000" />
+      <workItem from="1588679522944" duration="101000" />
+      <workItem from="1588753772970" duration="48000" />
+      <workItem from="1589265145210" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="website about my favourite artist">
       <created>1586552570128</created>
@@ -132,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588449449348</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="website about my favourite artist">
+      <created>1588679605787</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1588679605787</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,23 +170,23 @@
     <option name="LAST_COMMIT_MESSAGE" value="website about my favourite artist" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="570" y="114" key="CommitChangelistDialog2" timestamp="1588449446771">
+    <state x="570" y="114" key="CommitChangelistDialog2" timestamp="1588679603357">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="570" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588449446771" />
+    <state x="570" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588679603357" />
     <state x="651" y="170" key="FileChooserDialogImpl" timestamp="1588584498713">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583872188347" />
     <state x="651" y="170" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588584498713" />
-    <state x="0" y="688" key="com.intellij.ide.util.TipDialog" timestamp="1588584483735">
+    <state x="0" y="688" key="com.intellij.ide.util.TipDialog" timestamp="1588753780609">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583872137784" />
-    <state x="0" y="688" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588584483735" />
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588679559987">
+    <state x="0" y="688" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588753780609" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589265160309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588679559987" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589265160309" />
   </component>
 </project>

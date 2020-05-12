@@ -128,17 +128,19 @@ $(document).ready(function () {
 });
 // Search by word 
 //sort By price
-
-    var priceList = [];
-    var price = document.getElementsByClassName("shop-item-price");
-    var text;
-    for (var i = 0; i < 12; i++) {
-        priceList.push(price[i].innerText);
-        price.sort;
-      console.log(priceList.sort((a, b) => (a - b)));
-        
-    }
-
-console.log(priceList);
-
+function Selected() {
+var priceList2 = [];
+var price2 = document.getElementsByClassName("shop-item");
+for (var i=0; i<12; i++) {
+    priceList2.push(price2[i]);
+ 
+}
+for(var i=0;i< 12; i++) {
+priceList2.sort(function(a, b) {
+    return a.getElementsByTagName("span")[1].innerText.substring(1) - b.getElementsByTagName("span")[1].innerText.substring(1);
+  });
+  console.log(priceList2[i].getElementsByTagName("span")[1].innerText);
+}
+}
     //sort By price
+    

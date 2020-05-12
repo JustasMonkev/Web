@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="../css/aos.css">
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://kit.fontawesome.com/59558f9cd7.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
      <!-- Vaivos ajax nuoroda --> 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
@@ -66,7 +69,7 @@
            <div>
                 <nav class="navbar">
                     <input id="myInput" class="form-control" type="text" placeholder="Search..">
-                    <select id="myInput-sort" class="rounded">
+                        <select onclick="Selected()" id="myInput-sort" class="rounded">
                         <option value="empty"> Sort by... </option>
                         <option value="Price"> Price </option>
                         <option value="Data"> Album date </option>
@@ -240,7 +243,7 @@
                         </div>
                     </div>
                     <br>
-                    <span class="shop-item-price">$9</span>
+                    <span class="shop-item-price">$19</span>
                     <div class="shop-item-details">
                         <pre>  </pre>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>

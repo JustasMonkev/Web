@@ -1,4 +1,3 @@
-
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
@@ -128,19 +127,52 @@ $(document).ready(function () {
 });
 // Search by word 
 //sort By price
-function Selected() {
+var selected1 = document.getElementById("myInput-sort");
 var priceList2 = [];
+var dataList = [];
+
+function Selected() {
+    if (selected1.value == "Price") {
+        liMaker1(priceList2);
+    }
+    if (selected1.value == "Data") {
+        liMaker2(dataList);
+    }
+}
 var price2 = document.getElementsByClassName("shop-item");
-for (var i=0; i<12; i++) {
+for (var i = 0; i < 12; i++) {
     priceList2.push(price2[i]);
- 
 }
-for(var i=0;i< 12; i++) {
-priceList2.sort(function(a, b) {
-    return a.getElementsByTagName("span")[1].innerText.substring(1) - b.getElementsByTagName("span")[1].innerText.substring(1);
-  });
-  console.log(priceList2[i].getElementsByTagName("span")[1].innerText);
+for (var i = 0; i < 12; i++) {
+    priceList2.sort(function (a, b) {
+        return a.getElementsByTagName("span")[1].innerText.substring(1) - b.getElementsByTagName("span")[1].innerText.substring(1);
+    });
 }
+
+function liMaker1(obj) {
+    for (var i = 0; i < priceList2.length; i++) {
+        let div = document.createElement("div");
+        div.appendChild(priceList2[i]);
+        document.getElementById("kaina").append(div);
+    }
 }
-    //sort By price
-    
+
+var date = document.getElementsByClassName("shop-item");
+for (var i = 0; i < 12; i++) {
+    dataList.push(date[i]);
+}
+for (var i = 0; i < 12; i++) {
+    dataList.sort(function (a, b) {
+         return b.getElementsByTagName("span")[2].innerText.substring(0,4) - a.getElementsByTagName("span")[2].innerText.substring(0,4)
+    });
+}
+
+
+function liMaker2(obj) {
+    for (var i = 0; i < dataList.length; i++) {
+        let div = document.createElement("div");
+        div.appendChild(dataList[i]);
+        document.getElementById("kaina").append(div);
+    }
+}
+//sort By price

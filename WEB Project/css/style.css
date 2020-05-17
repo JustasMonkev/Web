@@ -1442,3 +1442,76 @@ margin-top: -36.5%;
     text-align: center;
     font-weight: bold;
 }
+.itunesfor15songs {
+    text-align: center;
+    padding-right: 36.3%;
+    padding-left: 29%;
+    color: white;
+    background-color: rgb(75, 75, 75);
+    border: none;
+    border-radius: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+.moveitenus15songs {
+    margin-left: 51.5%;
+    margin-top: -2.2%;
+}
+.amazon16songs {
+    margin-left: 57.5%;
+    margin-top: -6%;
+    border-radius: 1em;
+    text-align: center;
+    padding-right: 16%;
+    padding-left: 14.5%;
+}
+.itunesfor16songs {
+    text-align: center;
+    padding-right: 38.3%;
+    padding-left: 33%;
+    color: white;
+    background-color: rgb(75, 75, 75);
+    border: none;
+    border-radius: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+.moveitenus16songs {
+    margin-left: 55.5%;
+    margin-top: -1.2%;
+}
+.moveitenus17songs {
+    margin-left: 55.5%;
+    margin-top: -4.2%;
+}
+.amazon17songs {
+    margin-left: 57.5%;
+    margin-top: -12%;
+    border-radius: 1em;
+    text-align: center;
+    padding-right: 16%;
+    padding-left: 14.5%;
+}
+.amazon25songs {
+    margin-left: 56.5%;
+    margin-top: -59%;
+    border-radius: 1em;
+    text-align: center;
+    padding-right: 17%;
+    padding-left: 19.5%;
+}
+.itunesfor25songs {
+    text-align: center;
+    padding-right: 40.3%;
+    padding-left: 42%;
+    color: white;
+    background-color: rgb(75, 75, 75);
+    border: none;
+    border-radius: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+.moveitenus25songs {
+    margin-left: 54.5%;
+    margin-top: -27.2%;
+}

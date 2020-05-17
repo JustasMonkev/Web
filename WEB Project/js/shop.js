@@ -163,7 +163,7 @@ for (var i = 0; i < 12; i++) {
 }
 for (var i = 0; i < 12; i++) {
     dataList.sort(function (a, b) {
-         return b.getElementsByTagName("span")[2].innerText.substring(0,4) - a.getElementsByTagName("span")[2].innerText.substring(0,4)
+         return new Date(b.getElementsByTagName("span")[2].innerText.substring(0)).getTime() -  new Date (a.getElementsByTagName("span")[2].innerText.substring(0)).getTime()
     });
 }
 

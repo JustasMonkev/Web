@@ -1,4 +1,8 @@
 # Web
+<html>
+  <head>
+  </head>
+  <body>
 Links To My Websites 
 
 Website about my favourite artist
@@ -8,3 +12,5 @@ Website about my favourite artist
 Javascript Parking Locator
 
 https://justasmonkev.github.io/Web/Parking%20Locator/
+</body>
+</html>

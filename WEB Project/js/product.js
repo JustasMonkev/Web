@@ -2,7 +2,7 @@ fetch('https://api.spotify.com/v1/artists/5K4W6rqBFWDnAN6FQUkS6x/albums?market=L
     headers: {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "Bearer BQBYkhU-fqJZ0b1fV8QcB2koj6tYlAoubXrknVGypjeihvbPUi9YqIlPhuif9RZ9aoTc144NgOICAZBD0Olli1iCFXxx9UzzmBYOUwjU7vwMzN_-tbWhBpAmAQoUSBJrqjwIOlodETQu02OjNaSPQVlM55WwVu8RxiPlRfjn--mczzEv4"
+        "Authorization": ""
     }
 }).then(function (response) {
     return response.json();

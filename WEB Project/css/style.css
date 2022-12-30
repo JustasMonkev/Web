@@ -806,9 +806,6 @@ footer {
     background-color: rgb(66, 68, 67, 0.6);
 }
 
-.musicnavimg {
-    background-image: url("../IMG/ws_Nas___Damian_Marley_2560x1600%20(1).jpg");
-}
 
 .musicc {
     color: rgb(217, 217, 217);
@@ -890,7 +887,8 @@ footer {
 }
 
 .shop-item {
-    margin: 30px;
+    width: 26%;
+    margin-right: 2%;
 }
 
 .shop-item-title {
@@ -901,6 +899,7 @@ footer {
     font-size: 1.5em;
     color: white;
     margin-bottom: 15px;
+    word-wrap: break-word;
 }
 
 .shop-item-image {
